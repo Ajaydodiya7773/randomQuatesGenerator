@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-quote-left"></i> Random Quotes Generator</h1>
+            <p>Discover inspiring quotes to brighten your day</p>
+        </header>
+
+        <main class="quote-container">
+            <div class="quote-card" id="quoteCard">
+                <div class="quote-content">
+                    <blockquote id="quoteText">
+                        Click "Get New Quote" to start discovering amazing quotes!
+                    </blockquote>
+                    <cite id="quoteAuthor">- Welcome</cite>
+                </div>
+                <div class="quote-actions">
+                    <button id="newQuoteBtn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i>
+                        Get New Quote
+                    </button>
+                    <button id="copyQuoteBtn" class="btn btn-secondary">
+                        <i class="fas fa-copy"></i>
+                        Copy Quote
+                    </button>
+                    <button id="shareQuoteBtn" class="btn btn-secondary">
+                        <i class="fas fa-share"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalQuotes">-</span>
+                    <span class="stat-label">Total Quotes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="quotesViewed">0</span>
+                    <span class="stat-label">Quotes Viewed</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Random Quotes Generator. Made with <i class="fas fa-heart"></i> by Ajay</p>
+            <div class="api-links">
+                <a href="/quote" target="_blank">API: Get Random Quote</a> | 
+                <a href="/quotes" target="_blank">API: Get All Quotes</a> | 
+                <a href="/quotes/count" target="_blank">API: Quote Count</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading spinner -->
+    <div class="loading" id="loading">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Quote copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
